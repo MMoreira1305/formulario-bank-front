@@ -1,0 +1,94 @@
+/* Estilos globais */
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #ffffff;
+  color: #333;
+}
+
+/* Cabeçalho */
+header {
+  background-color: #b22222;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+}
+
+header .logo {
+  height: 50px;
+  cursor: pointer;
+}
+
+/* Formulário */
+form {
+  width: 350px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f8f8f8;
+}
+
+div {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+input:focus {
+  border-color: #b22222;
+  outline: none;
+}
+
+small {
+  color: #b22222;
+  font-size: 12px;
+}
+
+/* Botão de Envio */
+button {
+  margin-top: 2px;
+  width: 100%;
+  padding: 12px;
+  background-color: #b22222;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-avancar {
+  margin-top: 3px;
+}
+
+.btn-enviar {
+  margin-top: 3px;
+}
+
+button:hover {
+  background-color: #8b0000;
+}
+
+button[disabled] {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
