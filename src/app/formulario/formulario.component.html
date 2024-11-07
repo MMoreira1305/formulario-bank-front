@@ -88,6 +88,28 @@
     </div>
 
     <button type="button" (click)="retrocederEtapa()">&larr; Anterior</button>
-    <button class="btn-envio" type="submit">Enviar</button>
+    <button class="btn-envio" type="submit" [disabled]="isLoading">
+      Enviar
+    </button>
+
+    <div *ngIf="isLoading" class="loading">
+      <p>Carregando...</p>
+    </div>
   </div>
+
+  <!-- Etapa 4: Verificação de Token -->
+  <div *ngIf="etapa === 4">
+    <h3>4. Verificação de Token</h3>
+    <div>
+      <label for="token">Digite o token enviado ao seu email</label>
+      <input type="text" id="token" [(ngModel)]="dados.token" name="token" ngModel required minlength="6" maxlength="6" #token="ngModel" />
+      <div *ngIf="token.invalid && token.touched">
+        <small>O token é obrigatório e deve ter 6 caracteres.</small>
+      </div>
+    </div>
+    <button type="button" (click)="enviarNovamenteToken()">Reenviar Token</button>
+    <button type="button" (click)="retrocederEtapa()">&larr; Anterior</button>
+    <button type="button" [disabled]="token.invalid" (click)="verificarToken()">Verificar Token</button>
+  </div>
+
 </form>
