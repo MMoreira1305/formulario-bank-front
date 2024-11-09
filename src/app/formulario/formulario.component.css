@@ -1,7 +1,7 @@
 /* Estilos globais */
 * {
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -20,7 +20,7 @@ header {
 }
 
 header .logo {
-  height: 50px;
+  max-height: 30px;
   cursor: pointer;
 }
 

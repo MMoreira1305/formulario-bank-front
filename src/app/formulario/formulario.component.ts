@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-formulario',
@@ -19,13 +20,13 @@ export class FormularioComponent {
     prazo: null,
     rendaMensal: null,
     patrimonio: null,
-    token: '' // Adiciona o campo de token
+    token: ''
   };
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private router: Router) {}
 
   avancarEtapa() {
-    if (this.etapa < 4) { // Aumenta o número de etapas para incluir a verificação de token
+    if (this.etapa < 4) { 
       this.etapa++;
     }
   }
@@ -58,7 +59,6 @@ export class FormularioComponent {
   }
 
   verificarToken() {
-    // Aqui você faz a chamada para verificar o token
     this.http.get(environment.apiUrl + '/token/'+this.dados.email, {})
       .subscribe({
         // Retorna o token que foi enviado para o email
@@ -66,8 +66,8 @@ export class FormularioComponent {
           if(this.dados.token = response){
             this.confirmaToken();
             console.log("Token verificado com sucesso!", response);
-            alert("Token verificado com sucesso!");
-            this.avancarEtapa(); // Aqui você pode avançar para a próxima tela após a verificação do token
+            alert("Token verificado com sucesso! Seu cadastro foi enviado para nossos especialistas!");
+            this.router.navigate(['/formulario']);
           }else{
             alert("Token inválido! Tente novamente ou reenvie!");
           }

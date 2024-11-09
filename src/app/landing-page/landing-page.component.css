@@ -1,0 +1,116 @@
+/* Paleta de Cores */
+:root {
+    --cor-primaria: #ff0000;
+    --cor-secundaria: #000000;
+    --cor-fundo: #ffffff;
+    --cor-texto: #333333;
+  }
+  
+  /* Estilos Gerais */
+  body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--cor-texto);
+    margin: 0;
+    background-color: var(--cor-fundo);
+  }
+  
+  header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--cor-primaria);
+    max-height: 60px;
+  }
+  
+  .logo {
+    max-width: 120px;
+    max-height: 100px;
+  }
+  
+  /* Hero Section */
+  .hero {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: var(--cor-primaria);
+    color: var(--cor-fundo);
+  }
+  
+  .title {
+    font-size: 2.5em;
+    font-weight: bold;
+  }
+  
+  .intro-text {
+    font-size: 1.2em;
+    margin: 20px 0;
+  }
+  
+  .cta-button {
+    background-color: rgb(218, 21, 21);
+    color: var(--cor-fundo);
+    padding: 15px 30px;
+    border: none;
+    font-size: 1.1em;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .cta-button:hover {
+    background-color: #333;
+  }
+  
+  /* Image Section */
+  .image-section {
+    position: relative;
+    text-align: center;
+  }
+  
+  .background-image {
+    width: 100%;
+    max-height: 530px;
+    opacity: 0.8;
+  }
+  
+  .overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--cor-primaria);
+    font-size: 2em;
+    font-weight: bold;
+  }
+  
+  /* Info Section */
+  .info-section {
+    text-align: center;
+    padding: 40px 20px;
+  }
+  
+  .info-section p {
+    font-size: 1.1em;
+    margin: 20px auto;
+    max-width: 600px;
+    line-height: 1.5;
+  }
+  
+  /* FAQ Section */
+  .faq-section {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .faq-section h2 {
+    color: var(--cor-primaria);
+  }
+  
+  /* Footer */
+  footer {
+    background-color: rgb(170, 170, 170);
+    color: var(--cor-fundo);
+    padding: 20px;
+    text-align: center;
+    font-size: 0.9em;
+  }
+  
